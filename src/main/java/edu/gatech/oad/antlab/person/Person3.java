@@ -7,6 +7,9 @@ package edu.gatech.oad.antlab.person;
  *  @author  Bob
  *  @version 1.1
  */
+
+import java.lang.StringBuffer;
+
 public class Person3 {
    /** Holds the persons real name */  
 	private String name;
@@ -43,6 +46,7 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	  return null;
+	  String reverse = new StringBuffer(input).reverse().toString();
+	  return reverse;
 	}
 }
