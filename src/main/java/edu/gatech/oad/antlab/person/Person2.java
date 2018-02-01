@@ -30,8 +30,17 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return Collections.shuffle(name);
+	  	//Person 2 put your implementation here
+	  	Random r = new Random();
+        char str[] = input.toCharArray();
+        for (int i = 0; i < str.length; i++) {
+        	int pos = r.nextInt(str.length);
+        	char temp = str[i];
+        	str[i] = str[pos];
+        	str[pos] = temp;
+        }
+        input = new String(str);
+        return input;
 	}
 	/**
 	 * Return a string rep of this object
